@@ -1,0 +1,26 @@
+<!-- templates/post_edit.html -->
+{% extends "base.html" %}
+{% block content %}
+<head>
+    <title>DNA Institute of Technology</title>
+</head>
+<body>
+    <form action="{% url 'mysignup' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p class="padding"></p>
+        <br>
+        <center>
+            <p style="color:chocolate; font-weight: bold; font-size:16.7px;">DNA<br>CODING</p>
+            <hr>
+            <p>please, Sign-up, Beloveds!</p>
+            <input type="text" name="username" placeholder="Username" style="height:30px; width:270px; border-color: aqua"><br><br>
+            <input type="email" name="email" placeholder="Email-address" style="height:30px; width:270px; border-color: aqua"><br><br>
+            <input type="password" name="password1" placeholder="Password" style="height:30px; width:270px; border-color: violet"><br><br>
+            <input type="password" name="password2" placeholder="Retype Password" style="height:30px; width:270px; border-color: aqua"><br><br>
+            <input type="submit" value="Sign Up" style="background-color:gold; border-color: aliceblue; font-size: 13.7px; width:276px; height:30px;">
+        </center>
+    </form> 
+{% endblock content %}      
+</body>
+</html>

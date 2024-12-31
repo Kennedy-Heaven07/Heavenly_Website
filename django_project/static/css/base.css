@@ -1,0 +1,188 @@
+/* Reset and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General body styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 1.37;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange children vertically */
+  min-height: 100vh; /* Ensure the body is at least the full viewport height */
+  background-color: #f5f5f5;
+}
+
+/* Main content area */
+.container {
+  flex: 1; /* Allow this section to take up available space */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 20px 10px;
+  border-bottom: 1px solid #999;
+}
+
+header h1 a {
+  background-color: rebeccapurple;
+  color: white; /* Ensures the login link text is white */
+  text-decoration: none;
+  font-family: 'monaco';
+  font-size: 23px;
+}
+
+/* Navigation styles */
+#hamburger {
+  position: fixed;
+  top: 30px;
+  left: 20px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rebeccapurple;
+  overflow-x: hidden;
+  transition: width 0.5s;
+}
+
+.nav-container.open {
+  width: 250px;
+}
+
+.nav-links {
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.nav-links a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ccc;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  color: white;
+}
+
+.nav-left {
+  display: flex;
+  justify-content: flex-start; /* Ensures alignment starts from the left */
+  align-items: center;
+  padding-top: 0rem;
+  padding-left: 3rem; /* Increases the space between the left edge and the content */
+  color: white;
+  margin-right: auto; /* Keeps the content on the left side of the screen */
+}
+
+  
+
+
+/* Hero section */
+.hero {
+  padding: 100px 0;
+  text-align: center;
+}
+.hero{
+  font-size: 23px;
+  margin-bottom: 20px;
+  color: white;
+text-decoration:none;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+/* Post entries */
+.post-entry {
+  margin-bottom: 2rem;
+}
+
+.post-entry h2 {
+  margin: 0.5rem 0;
+}
+
+.post-entry h2 a,
+.post-entry h2 a:visited {
+  color: blue;
+  text-decoration: none;
+}
+
+.post-entry h2 a:hover {
+  color: red;
+}
+
+.post-entry p {
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Footer styles */
+footer {
+  background-color: white;
+  color: rebeccapurple;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  margin-top: auto; /* Ensures footer stays at the bottom */
+  font-family: Optima;
+}
+
+/* Form styles */
+form.padding {
+  margin: 67px auto;
+  background-color: mintcream;
+  height: 360px;
+  width: 370px;
+  padding: 20px;
+}
+
+/* Background */
+#bg {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Headings */
+h3 {
+  color: white;
+  text-align: center;
+}

@@ -1,0 +1,57 @@
+<!-- templates/base.html -->
+{% load static %}
+<html>
+<head>
+<title>Django blog</title>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400"
+rel="stylesheet">
+<link href="{% static 'css/base.css' %}" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Linking external JavaScript file -->
+<script src="{% static 'javascript/Hamburger.js' %}"></script>
+</head>
+<body id="bg" style="background-image: url('{% static "media/vivid-blurred-colorful-gradient-wallpaper-background-illustration_969463-3069.avif" %}');">
+<div>
+<header>
+<div class="nav-left">
+<h1><a href="{% url 'home' %}">dNa Institute of Technology</a></h1>
+</div>
+<div class="nav-right">
+<a href="{% url 'post_new' %}">+ New Blog Post</a>
+</div>
+</header>
+  {% if user.is_authenticated %}
+<p>Hi {{ user.username }}!</p>
+</div>
+<div class="nav-right">
+<form action="{% url 'logout' %}" method="post">
+  {% csrf_token %}
+  <button type="submit">Log Out</button>
+</form>
+{% else %}
+<p>You are not logged in.</p>
+<a href="{% url 'login' %}" class="hero">Log In</a> |
+<a href="{% url 'mysignup' %}" class="hero">Sign Up</a>
+{% endif %}
+{% block content %}
+{% endblock content %}
+</div>
+<h3><a href="#" id="k"></a></h3>
+<!-- Hamburger Icon -->
+<div id="hamburger">&#9776;</div>
+<!-- Navigation Container -->
+<div class="nav-container" id="navContainer">
+  <div class="nav-links">
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'about' %}">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Garden of Eden. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
